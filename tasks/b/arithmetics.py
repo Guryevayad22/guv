@@ -21,6 +21,7 @@
 Запишите в переменную FLOATS, сколько среди пунктов [a]-[h] нецелых результатов
 в смысле type(результата) == float.
 """
+import math
 
 from test.common.context import get_integer, get_float  # не обращайте внимание
 
@@ -29,7 +30,45 @@ y = get_integer()
 z = get_float()
 
 print(x, y, z)  # вывести три числа через пробел
+a = x + y + z
+print(a)
 
+b = x * y * z
+print(b)
+
+c = x * z
+math.ceil(c)
+print(c)
+
+d = x / z
+print(d)
+
+e = x / z
+math.floor(e)
+print(e)
+
+p = x / z
+f = p - math.floor(p)
+print(f)
+
+g = y ** z
+print(g)
+
+h = (x * y + x * z + z * y) ** 3
+print(h)
+
+i = round(z, 5)
+print(i)
+"""
 # Место для вашего кода
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(type(e))
 
-FLOATS = ...
+print(type(f))
+print(type(g))
+print(type(h))
+"""
+FLOATS = 8

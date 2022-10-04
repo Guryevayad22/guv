@@ -17,14 +17,50 @@
 - [g] массив, состоящий из всех элементов a на четных позициях
     > подсказка: используйте срез
 """
+import statistics
 
 from test.common.context import get_integer
 
 n = get_integer()
-a = ...
+a = [0] * n
+
+for i in range(n):
+    a[i] = get_integer()
+print(a)
+
+res = a[0], a[len(a) // 2 - 1], a[-1]
+print(*res)
+
+res1 = max(a), min(a)
+print(*res1)
+
+res2 = sum(a)
+print(res2)
+
+s = []
+for el in a:# обращение к элементу массива
+    if el % 2 == 0:
+        s.append(el ** 2)#append - добавление элемента в конец списка
+#for i in range(len(a)):  # обращение к элементу массива по индексу
+ #           if a[i] % 2 == 0:
+  #              s.append(a[i] ** 2)
+print(s)
+
+print(a.index(min(a))) #index - индекс первого вхождения
+
+print(a[::-1]) #переворачивает список
+
+b = []
+for i in range(len(a)):
+    if i % 2 == 0:
+        b.append(a[i])
+print(b)
+#print(a[::2])
+
+
+
 
 # Место для вашего кода (заполнение массива)
 
-print(a)
 
 # Место для вашего кода

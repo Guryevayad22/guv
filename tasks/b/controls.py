@@ -20,4 +20,26 @@ s = get_string()
 
 print(x, y, s)
 
+if x > y:
+    a = x - y - 1
+elif x < y:
+    a = y - x - 1
+elif x == y:
+    a = 0
+print(a)
+
+b=0
+while x != 1: #спросить почему с двумя if не работает (получается бесконечный цикл)
+    if x % 2 == 0:
+        x = x / 2
+    else:
+        x = 3 * x + 1
+    b += 1
+print(b)
+d = 0
+for i in s:
+    if i in ['a', 'e', 'i', 'o', 'u']:
+        d += 1
+print(d)
+
 # Место для вашего кода
